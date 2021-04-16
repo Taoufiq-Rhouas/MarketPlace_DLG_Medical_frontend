@@ -19,7 +19,7 @@ export default function HomeScreen() {
     const [products, setProducts] = useState([]);
     useEffect(() =>{
         const fetchData = async () =>{
-            const {data} = await axios.get('/api/products');
+            const {data} = await axios.get('https://marketdmedicalbackend.herokuapp.com/api/products');
             setProducts(data);
         };
         fetchData();
